@@ -2,6 +2,9 @@
 import sys
 import traceback
 
+# Custom Libraries
+from utils import file_utils
+
 
 def stop():
     sys.exit(1)
@@ -9,7 +12,11 @@ def stop():
 
 def main():
     try:
-        pass
+        # Step #1: Loading 1M numbers from txt file
+        loaded_unique_numbers = file_utils.load_unique_numbers_from_txt_file(file_path="files/input_1M_numbers.txt")
+
+        # Step #2: Count unique sums
+        ...
     except KeyboardInterrupt:
         print("[ERROR] Failed: script interrupted by user (CTRL + C)")
         stop()
