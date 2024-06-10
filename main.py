@@ -20,6 +20,7 @@ def main():
         loaded_unique_numbers = file_utils.load_unique_numbers_from_txt_file(file_path="files/input_1M_numbers.txt")
 
         # Step #2: Count unique sums & print result
+        print(f"[INFO] Counting sums, it may take some time...")
         unique_sums = sums_counter.count(numbers=loaded_unique_numbers, min_sum=-1000, max_sum=1000)
         print(f"[INFO] Unique sums count: {unique_sums}")
     except KeyboardInterrupt:
